@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Australia’s AI Economy 2027–2030</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a33;
+      --ink: #f5f7fb;
+      --muted: #b8c2d6;
+      --accent: #6ee7f9;
+      --accent2: #a78bfa;
+      --good: #34d399;
+      --bad: #fb7185;
+      --line: #283452;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top left, #1e2a55 0, #0b1020 34%, #070b16 100%);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    header {
+      padding: 76px 6vw 48px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero {
+      max-width: 1100px;
+    }
+
+    .kicker {
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.88rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 5rem);
+      line-height: 1.02;
+      margin: 0.2em 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 0.2rem 0 1rem;
+    }
+
+    h3 {
+      color: #ffffff;
+      margin-top: 0.2rem;
+    }
+
+    .hero p {
+      max-width: 920px;
+      font-size: 1.18rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 22px;
+      padding: 34px 6vw;
+    }
+
+    .card {
+      grid-column: span 4;
+      background: rgba(18, 26, 51, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.24);
+    }
+
+    .wide {
+      grid-column: span 8;
+    }
+
+    .half {
+      grid-column: span 6;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .metric {
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: var(--accent);
+    }
+
+    .pill {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin: 4px 6px 4px 0;
+      color: var(--muted);
+      background: #0d152b;
+    }
+
+    .note {
+      border-left: 4px solid var(--accent);
+      padding-left: 16px;
+      color: var(--muted);
+    }
+
+    .scenario {
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .scenario:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .scenario.active {
+      outline: 2px solid var(--accent);
+    }
+
+    button {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: 0;
+      color: #071020;
+      font-weight: 800;
+      border-radius: 14px;
+      padding: 10px 14px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      filter: brightness(1.08);
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 12px 0;
+    }
+
+    .small {
+      font-size: 0.92rem;
+    }
+
+    .ref li {
+      margin-bottom: 12px;
+    }
+
+    .footer {
+      padding: 42px 6vw;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    canvas {
+      max-height: 360px;
+    }
+
+    @media (max-width: 850px) {
+      .card,
+      .wide,
+      .half {
+        grid-column: 1 / -1;
+      }
+
+      .grid {
+        padding: 22px 4vw;
+      }
+
+      header {
+        padding: 52px 4vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="hero">
+      <div class="kicker">ECON1626 AI future forecast · Interactive web essay</div>
+
+      <h1>Australia’s AI economy, 2027–2030: fast diffusion, slow institutions</h1>
+
+      <p>
+        <strong>Thesis:</strong> by 2030, generative and agentic AI will be a productivity shock for Australia,
+        but not automatically a prosperity shock. The size and distribution of gains will depend less on model
+        capability alone and more on complementary investment: skills, trusted data access, cyber safety,
+        competition policy, public-sector adoption and energy-efficient compute.
+      </p>
+
+      <p class="muted">
+        Inspired by <em>AI 2027</em>, this forecast treats AI progress as a scenario problem:
+        rapid capability growth meets institutional bottlenecks, labour-market frictions and governance choices.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid">
+      <article class="card">
+        <div class="metric">2027</div>
+        <h3>Inflection point</h3>
+        <p>
+          AI agents move from “assistive chat” to semi-autonomous workflows: drafting, coding,
+          customer service triage, research synthesis, compliance checking and data analysis.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="metric">2030</div>
+        <h3>Forecast horizon</h3>
+        <p>
+          Three years is long enough for diffusion, reskilling and business-model change, but short enough that
+          regulation, infrastructure and adoption frictions still dominate.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="metric">3 paths</div>
+        <h3>Baseline · upside · downside</h3>
+        <p>
+          Australia’s outcome depends on whether it becomes only an AI-taker, or an AI-taker with strong
+          domestic adaptation, governance and trusted deployment.
+        </p>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card wide">
+        <h2>1. Capabilities → economic channels</h2>
+
+        <p>
+          AI is best understood as a general-purpose technology: its macroeconomic impact comes from many
+          task-level changes across the economy, rather than a single isolated invention. The most important
+          channels are labour productivity, task substitution, task augmentation, skills churn, public-service
+          efficiency and industry restructuring.
+        </p>
+
+        <p>
+          <span class="pill">Labour productivity</span>
+          <span class="pill">Task substitution</span>
+          <span class="pill">Task augmentation</span>
+          <span class="pill">Firm mark-ups</span>
+          <span class="pill">Skills churn</span>
+          <span class="pill">Public-service efficiency</span>
+        </p>
+
+        <ol>
+          <li>
+            <strong>Productivity:</strong> workers complete writing, coding, analysis and administrative tasks faster,
+            especially when firms redesign processes rather than simply adding AI tools to old workflows.
+          </li>
+          <li>
+            <strong>Employment and wages:</strong> AI substitutes for some routine cognitive tasks but complements
+            workers who can supervise tools, interpret outputs and redesign workflows. The key labour-market issue is
+            not only job loss, but task change.
+          </li>
+          <li>
+            <strong>Industry structure:</strong> large firms may benefit first because they have data, cloud budgets,
+            cybersecurity teams and compliance capacity. SMEs catch up only if tools are affordable, interoperable
+            and trusted.
+          </li>
+          <li>
+            <strong>Distribution:</strong> capital owners and high-skill workers may capture early gains unless policy
+            expands access, bargaining power and reskilling.
+          </li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h2>Forecast logic</h2>
+        <p class="note">
+          Capability is not adoption. Adoption is not productivity. Productivity is not shared prosperity.
+        </p>
+
+        <p class="small">
+          This essay models AI impact as:
+          <br>
+          <strong>capability × diffusion × organisational redesign × governance quality</strong>.
+        </p>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card full">
+        <h2>2. Interactive scenario dashboard</h2>
+
+        <p class="muted">
+          Click a scenario to update the charts. The values are illustrative index assumptions for a transparent
+          teaching model. They are not official ABS, RBA or Treasury forecasts.
+        </p>
+
+        <div class="controls">
+          <button onclick="setScenario('baseline')">Baseline: managed diffusion</button>
+          <button onclick="setScenario('upside')">Upside: broad productivity compact</button>
+          <button onclick="setScenario('downside')">Downside: brittle race</button>
+        </div>
+      </article>
+
+      <article id="baseline" class="card scenario active" onclick="setScenario('baseline')">
+        <h3>Baseline</h3>
+        <p>
+          AI is widely used, but many firms bolt it onto old processes. Gains are real but uneven.
+        </p>
+      </article>
+
+      <article id="upside" class="card scenario" onclick="setScenario('upside')">
+        <h3>Upside</h3>
+        <p>
+          Public and private sectors coordinate skills, procurement, competition and safety. SMEs diffuse AI faster.
+        </p>
+      </article>
+
+      <article id="downside" class="card scenario" onclick="setScenario('downside')">
+        <h3>Downside</h3>
+        <p>
+          Rushed adoption increases cyber, bias and job-quality risks. Productivity gains concentrate in frontier firms.
+        </p>
+      </article>
+
+      <article class="card half">
+        <canvas id="prodChart" aria-label="Productivity index chart"></canvas>
+      </article>
+
+      <article class="card half">
+        <canvas id="taskChart" aria-label="Task exposure chart"></canvas>
+      </article>
+
+      <article class="card full">
+        <h2 id="scenarioTitle">Baseline: managed diffusion</h2>
+        <p id="scenarioText"></p>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card full">
+        <h2>3. Scenario analysis</h2>
+      </article>
+
+      <article class="card">
+        <h3>Baseline: managed diffusion</h3>
+        <p>
+          In the baseline case, Australian firms adopt generative AI steadily, especially in professional services,
+          finance, software, education administration, marketing and government back-office functions. Productivity
+          improves, but the effect is delayed because firms must invest in data quality, workflow redesign, training
+          and risk management.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Upside: broad productivity compact</h3>
+        <p>
+          In the upside case, AI capability is matched by institutional capability. Government, employers, unions,
+          universities, TAFEs and technology providers coordinate around skills, trusted adoption and public-interest
+          deployment. This produces broader productivity gains and reduces the risk that only frontier firms capture
+          the value.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Downside: brittle race</h3>
+        <p>
+          In the downside case, organisations rush to deploy AI without sufficient governance. Short-term cost cutting
+          creates cyber incidents, discriminatory outcomes, poor-quality automated decisions and work intensification.
+          The productivity promise is weakened by low trust and reactive regulation.
+        </p>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card full">
+        <h2>4. Policy playbook: shifting the trajectory</h2>
+        <p class="muted">
+          The policy goal should not be to slow AI adoption everywhere. It should be to make adoption productive,
+          contestable, safe and widely shared.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>1. Skills guarantee</h3>
+        <p>
+          Fund short, stackable AI credentials for managers, teachers, nurses, trades coordinators, analysts,
+          small-business owners and public servants.
+        </p>
+        <p class="small">
+          <strong>KPI:</strong> share of workers receiving practical AI training by industry, age group and region.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>2. Trusted adoption for SMEs</h3>
+        <p>
+          Create sector templates for privacy, cybersecurity, procurement and model evaluation so SMEs can adopt
+          safely without building compliance systems from scratch.
+        </p>
+        <p class="small">
+          <strong>KPI:</strong> SME AI adoption gap compared with large firms.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>3. Public-sector demand pull</h3>
+        <p>
+          Use government procurement to reward auditable, accessible and high-productivity AI tools in health,
+          education, planning, translation, legal assistance and benefits administration.
+        </p>
+        <p class="small">
+          <strong>KPI:</strong> service wait times, administrative error rates and appeal rates.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>4. Competition and data access</h3>
+        <p>
+          Prevent cloud and model lock-in through interoperability, data portability and scrutiny of AI platform mergers.
+          This matters because AI markets can concentrate around compute, data, distribution and ecosystem control.
+        </p>
+        <p class="small">
+          <strong>KPI:</strong> switching costs, AI service prices and market concentration.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>5. Safety, rights and accountability</h3>
+        <p>
+          Require risk assessment for high-impact AI decisions, human review, incident reporting and contestability.
+          Workers and citizens should be able to challenge consequential automated decisions.
+        </p>
+        <p class="small">
+          <strong>KPI:</strong> AI incidents, discrimination complaints and successful appeals.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>6. Energy-aware compute</h3>
+        <p>
+          Link data-centre approvals to renewable power, grid planning and water constraints. AI infrastructure should
+          support productivity without undermining climate and energy goals.
+        </p>
+        <p class="small">
+          <strong>KPI:</strong> emissions intensity per unit of AI compute.
+        </p>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card wide">
+        <h2>5. Methods, assumptions and limitations</h2>
+
+        <p>
+          This forecast combines scenario analysis, task-based labour-market reasoning and a simple index model.
+          The charts use synthetic indices to make mechanisms visible. They are not official forecasts. The qualitative
+          assumptions are grounded in evidence on AI as a general-purpose technology, Australian AI ecosystem development,
+          labour-market exposure and policy debates.
+        </p>
+
+        <p>
+          <strong>Key assumption:</strong> AI capability improves quickly, but economic transformation is limited by
+          adoption frictions. Firms must change workflows, train workers, manage risk, integrate data and build trust.
+        </p>
+
+        <p>
+          <strong>Key uncertainty:</strong> the largest unknown is not only whether AI systems improve. It is whether
+          organisations can safely redesign work around them. Productivity may arrive with a lag because complementary
+          capital, skills, trust and regulation take time.
+        </p>
+
+        <p>
+          <strong>Model limitation:</strong> the scenario dashboard simplifies a complex economy into index values.
+          It should be read as a transparent narrative model, not as a predictive econometric model.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Ethical lens</h2>
+
+        <p>
+          AI policy should not only maximise GDP. It should protect agency, privacy, contestability, accessibility and
+          fair distribution of gains.
+        </p>
+
+        <p>
+          A higher-productivity economy is a weak success if it also produces lower trust, greater insecurity,
+          discriminatory decision-making and concentrated market power.
+        </p>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card full">
+        <h2>6. References and attributions</h2>
+
+        <p>
+          References will be added in RMIT Harvard style in a later commit.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Prepared for ECON1626 by Oscar Blatnik. Submitted June 2026.
+    </p>
+  </footer>
+
+  <script>
+    const scenarios = {
+      baseline: {
+        title: "Baseline: managed diffusion",
+        prod: [100, 101.0, 102.2, 103.7, 105.5, 107.2],
+        tasks: [25, 45, 30],
+        text: "AI adoption spreads through finance, professional services, education administration, software, marketing and government back offices. Productivity improves, but the gains arrive gradually because firms need data governance, workflow redesign and training. Employment effects are mostly task reshuffling rather than mass unemployment."
+      },
+      upside: {
+        title: "Upside: broad productivity compact",
+        prod: [100, 101.4, 103.4, 106.2, 109.6, 113.5],
+        tasks: [18, 58, 24],
+        text: "Australia pairs AI adoption with skills, competition, trusted data-sharing and public-sector procurement. SMEs gain access to safe templates and low-cost tools. Labour productivity improves more strongly and wage gains broaden because workers move into higher-value judgement, care, coordination and problem-solving tasks."
+      },
+      downside: {
+        title: "Downside: brittle race",
+        prod: [100, 100.7, 101.4, 102.0, 102.3, 102.6],
+        tasks: [38, 32, 30],
+        text: "Rushed deployment produces cyber incidents, biased decisions, low trust and work intensification. Frontier firms capture gains while lagging firms and exposed workers fall behind. Regulation becomes reactive after harms occur, slowing diffusion and increasing inequality."
+      }
+    };
+
+    let prodChart;
+    let taskChart;
+
+    function setScenario(key) {
+      document.querySelectorAll(".scenario").forEach(card => {
+        card.classList.remove("active");
+      });
+
+      document.getElementById(key).classList.add("active");
+
+      const scenario = scenarios[key];
+
+      document.getElementById("scenarioTitle").innerText = scenario.title;
+      document.getElementById("scenarioText").innerText = scenario.text;
+
+      prodChart.data.datasets[0].data = scenario.prod;
+      prodChart.data.datasets[0].label = scenario.title + " productivity index";
+      prodChart.update();
+
+      taskChart.data.datasets[0].data = scenario.tasks;
+      taskChart.update();
+    }
+
+    window.addEventListener("load", () => {
+      prodChart = new Chart(document.getElementById("prodChart"), {
+        type: "line",
+        data: {
+          labels: ["2025", "2026", "2027", "2028", "2029", "2030"],
+          datasets: [
+            {
+              label: "Baseline productivity index",
+              data: scenarios.baseline.prod,
+              borderColor: "#6ee7f9",
+              backgroundColor: "rgba(110, 231, 249, 0.15)",
+              tension: 0.35,
+              fill: true
+            }
+          ]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: "Labour productivity index, 2025 = 100"
+            },
+            legend: {
+              labels: {
+                color: "#f5f7fb"
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: "#b8c2d6"
+              },
+              grid: {
+                color: "#283452"
+              }
+            },
+            y: {
+              ticks: {
+                color: "#b8c2d6"
+              },
+              grid: {
+                color: "#283452"
+              }
+            }
+          }
+        }
+      });
+
+      taskChart = new Chart(document.getElementById("taskChart"), {
+        type: "bar",
+        data: {
+          labels: ["Substituted tasks", "Augmented tasks", "Little direct exposure"],
+          datasets: [
+            {
+              label: "Share of tasks, illustrative %",
+              data: scenarios.baseline.tasks,
+              backgroundColor: ["#fb7185", "#34d399", "#a78bfa"]
+            }
+          ]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: "Task impact mix"
+            },
+            legend: {
+              labels: {
+                color: "#f5f7fb"
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: "#b8c2d6"
+              },
+              grid: {
+                color: "#283452"
+              }
+            },
+            y: {
+              ticks: {
+                color: "#b8c2d6"
+              },
+              grid: {
+                color: "#283452"
+              },
+              max: 70
+            }
+          }
+        }
+      });
+
+      setScenario("baseline");
+    });
+  </script>
+</body>
+</html>
