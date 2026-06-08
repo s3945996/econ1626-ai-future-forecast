@@ -54,4 +54,4 @@ https://s3945996.github.io/econ1626-ai-future-forecast/
 Repository link:
 
 ```text
-https
+https://s3945996.github.io/econ1626-ai-future-forecast/
