@@ -414,9 +414,10 @@
     <section class="grid">
       <article class="card full">
         <h2>4. Policy playbook: shifting the trajectory</h2>
-        <p class="muted">
+    <p class="muted">
           The policy goal should not be to slow AI adoption everywhere. It should be to make adoption productive,
-          contestable, safe and widely shared.
+          contestable, safe and widely shared. The trade-off is that stronger governance may slow some deployments
+          in the short run, but can increase trust, reduce harms and support faster sustainable diffusion
         </p>
       </article>
 
