@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<title>AI Forecast</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body style="font-family:Arial; padding:40px;">
+
+<h1>Australia AI Economy Forecast (2027–2030)</h1>
+
+<p><b>Thesis:</b> AI will increase productivity in Australia, but benefits depend on policy, skills and adoption.</p>
+
+<h2>Scenarios</h2>
+
+<button onclick="loadScenario('baseline')">Baseline</button>
+<button onclick="loadScenario('upside')">Upside</button>
+<button onclick="loadScenario('downside')">Downside</button>
+
+<h3 id="scenarioTitle">Baseline</h3>
+<p id="scenarioText"></p>
+
+<canvas id="chart"></canvas>
+
+<script>
+
+const scenarios = {
+baseline: {
+text: "Moderate productivity growth and gradual AI adoption.",
+data: [100,102,104,106,108]
+},
+upside: {
+text: "Strong growth due to policy and skills investment.",
+data: [100,105,110,116,122]
+},
+downside: {
+text: "Weak growth due to inequality and poor adoption.",
+data: [100,101,102,103,104]
+}
+};
+
+let chart;
+
+function loadScenario(name){
+document.getElementById("scenarioTitle").innerText = name;
+document.getElementById("scenarioText").innerText = scenarios[name].text;
+
+chart.data.datasets[0].data = scenarios[name].data;
+chart.update();
+}
+
+window.onload = function(){
+
+chart = new Chart(document.getElementById("chart"), {
+type: 'line',
+data: {
+labels: ["2025","2026","2027","2028","2029"],
+datasets: [{
+label: "Productivity Index",
+data: scenarios.baseline.data
+}]
+}
+});
+
+loadScenario("baseline");
+
+}
+
+</script>
+
+</body>
+</html>
