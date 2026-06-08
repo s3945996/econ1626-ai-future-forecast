@@ -369,7 +369,7 @@
         <h2>3. Scenario analysis</h2>
       </article>
 
-      <article class="card">
+     <article class="card">
         <h3>Baseline: managed diffusion</h3>
         <p>
           In the baseline case, Australian firms adopt generative AI steadily, especially in professional services,
@@ -377,9 +377,13 @@
           improves, but the effect is delayed because firms must invest in data quality, workflow redesign, training
           and risk management.
         </p>
+        <p>
+          Policy setting: moderate coordination, gradual skills investment and uneven SME support. Outcome:
+          productivity gains appear, but are concentrated in better-managed firms.
+        </p>
       </article>
 
-      <article class="card">
+     <article class="card">
         <h3>Upside: broad productivity compact</h3>
         <p>
           In the upside case, AI capability is matched by institutional capability. Government, employers, unions,
@@ -387,16 +391,24 @@
           deployment. This produces broader productivity gains and reduces the risk that only frontier firms capture
           the value.
         </p>
+        <p>
+          Policy setting: fast training, strong competition rules, public-sector procurement standards and trusted
+          AI templates for SMEs. Outcome: AI diffusion becomes broader, safer and more productivity-enhancing.
+        </p>
       </article>
 
-      <article class="card">
+    <article class="card">
         <h3>Downside: brittle race</h3>
         <p>
           In the downside case, organisations rush to deploy AI without sufficient governance. Short-term cost cutting
           creates cyber incidents, discriminatory outcomes, poor-quality automated decisions and work intensification.
           The productivity promise is weakened by low trust and reactive regulation.
         </p>
-      </article>
+        <p>
+          Policy setting: weak coordination, poor transparency and reactive regulation after harms occur. Outcome:
+          adoption slows because workers, citizens and firms lose trust in AI systems.
+        </p>
+    
     </section>
 
     <section class="grid">
