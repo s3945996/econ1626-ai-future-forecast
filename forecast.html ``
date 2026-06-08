@@ -516,6 +516,11 @@
           It should be read as a transparent narrative model, not as a predictive econometric model. The synthetic
           chart values are used to communicate causal logic, not to claim statistical precision.
         </p>
+        <p>
+          <strong>AI-tooling disclosure:</strong> Microsoft Copilot based on GPT-5 reasoning model was used in June 2026
+          to help structure the argument, draft website copy, generate HTML/CSS/JavaScript, create scenario logic and
+          format references. The student remains responsible for checking, editing and submitting the final work.
+        </p>
       </article>
 
       <article class="card">
@@ -537,9 +542,74 @@
       <article class="card full">
         <h2>6. References and attributions</h2>
 
-        <p>
-          References will be added in RMIT Harvard style in a later commit.
+      <p>
+          The following references are formatted in RMIT Harvard style. They acknowledge the reports, data sources,
+          scenario framework and AI-tooling guidance used in the project.
         </p>
+
+        <ul class="ref">
+          <li>
+            Australian Government Department of Industry, Science and Resources 2026,
+            <em>Australia’s artificial intelligence ecosystem: growth and opportunities</em>,
+            Australian Government, viewed 7 June 2026,
+            &lt;https://www.ai.gov.au/news-and-insights/reports/australias-artificial-intelligence-ecosystem-growth-and-opportunities&gt;.
+          </li>
+
+          <li>
+            Cazzaniga, M, Jaumotte, F, Li, L, Melina, G, Panton, AJ, Pizzinelli, C, Rockall, EJ and Tavares, MM 2024,
+            <em>Gen-AI: artificial intelligence and the future of work</em>,
+            Staff Discussion Note SDN/2024/001, International Monetary Fund, Washington, DC, viewed 7 June 2026,
+            &lt;https://www.imf.org/en/publications/staff-discussion-notes/issues/2024/01/14/gen-ai-artificial-intelligence-and-the-future-of-work-542379&gt;.
+          </li>
+
+          <li>
+            Fernando, J, McLoughlin, K and Ratnayake, R 2025,
+            ‘Technology investment and AI: what are firms telling us?’,
+            <em>Reserve Bank of Australia Bulletin</em>, November, viewed 7 June 2026,
+            &lt;https://www.rba.gov.au/publications/bulletin/2025/nov/technology-investment-and-ai-what-are-firms-telling-us.html&gt;.
+          </li>
+
+          <li>
+            Filippucci, F, Gal, P, Jona-Lasinio, C, Leandro, A and Nicoletti, G 2024,
+            ‘The impact of artificial intelligence on productivity, distribution and growth: key mechanisms,
+            initial evidence and policy challenges’,
+            <em>OECD Artificial Intelligence Papers</em>, no. 15, OECD Publishing, Paris, viewed 7 June 2026,
+            &lt;https://doi.org/10.1787/8d900037-en&gt;.
+          </li>
+
+          <li>
+            Jobs and Skills Australia 2025,
+            <em>Our Gen AI transition: implications for work and skills</em>,
+            Australian Government, viewed 7 June 2026,
+            &lt;https://www.jobsandskills.gov.au/publications/generative-ai-capacity-study-report&gt;.
+          </li>
+
+          <li>
+            Kokotajlo, D, Alexander, S, Larsen, T, Lifland, E and Dean, R 2025,
+            <em>AI 2027</em>,
+            AI Futures Project, viewed 7 June 2026,
+            &lt;https://ai-2027.com/summary&gt;.
+          </li>
+
+          <li>
+            OECD 2024,
+            <em>Using AI in the workplace: opportunities, risks and policy responses</em>,
+            OECD Publishing, Paris, viewed 7 June 2026,
+            &lt;https://www.oecd.org/&gt;.
+          </li>
+
+          <li>
+            OpenAI 2025,
+            <em>AI in Australia: OpenAI’s economic blueprint</em>,
+            OpenAI, viewed 7 June 2026,
+            &lt;https://cdn.openai.com/global-affairs/61b341bc-56eb-46dc-b356-a621e02cb82d/openai-australia-economic-blueprint-july-2025.pdf&gt;.
+          </li>
+
+          <li>
+            RMIT University Library 2026,
+            <em>RMIT Harvard style guide: AI-generated content</em>,
+            RMIT University, viewed 7 June 2026,
+            &lt;https://www.lib.rmit.edu.au/easy-cite/?styleguide=styleguide-1&amp
       </article>
     </section>
   </main>
