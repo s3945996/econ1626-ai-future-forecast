@@ -217,9 +217,11 @@
         competition policy, public-sector adoption and energy-efficient compute.
       </p>
 
-      <p class="muted">
+  <p class="muted">
         Inspired by <em>AI 2027</em>, this forecast treats AI progress as a scenario problem:
         rapid capability growth meets institutional bottlenecks, labour-market frictions and governance choices.
+        The forecast focuses on Australia because it is a high-income, services-heavy economy where AI exposure is
+        likely to be high, but where the productivity payoff depends on diffusion beyond frontier firms.
       </p>
     </div>
   </header>
