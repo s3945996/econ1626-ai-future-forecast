@@ -32,3 +32,26 @@ After GitHub Pages is enabled, the website should be available at:
 
 ```text
 https://s3945996.github.io/econ1626-ai-future-forecast/
+
+
+## Final submission checklist
+
+- [x] Repository is named `econ1626-ai-future-forecast`
+- [x] `README.md` is included
+- [x] `index.html` is included
+- [x] `forecast.html` is included
+- [x] Interactive scenario buttons are included
+- [x] Interactive charts are included
+- [x] Baseline, upside and downside scenarios are included
+- [x] Policy playbook is included
+- [x] Methods and limitations are included
+- [x] RMIT Harvard references are included
+- [x] AI-use disclosure is included
+- [x] Project is ready for GitHub Pages deployment
+
+## Submission links
+
+Repository link:
+
+```text
+https
