@@ -496,7 +496,8 @@
           This forecast combines scenario analysis, task-based labour-market reasoning and a simple index model.
           The charts use synthetic indices to make mechanisms visible. They are not official forecasts. The qualitative
           assumptions are grounded in evidence on AI as a general-purpose technology, Australian AI ecosystem development,
-          labour-market exposure and policy debates.
+          labour-market exposure and policy debates. The model is deliberately simple so that readers can see how
+          different assumptions about adoption, governance and skills change the forecast.
         </p>
 
         <p>
@@ -512,7 +513,8 @@
 
         <p>
           <strong>Model limitation:</strong> the scenario dashboard simplifies a complex economy into index values.
-          It should be read as a transparent narrative model, not as a predictive econometric model.
+          It should be read as a transparent narrative model, not as a predictive econometric model. The synthetic
+          chart values are used to communicate causal logic, not to claim statistical precision.
         </p>
       </article>
 
